@@ -37,6 +37,17 @@ Route::middleware('auth')->group(function () {
             Route::get('/', 'GiftController@create')->name('index');
             Route::post('/', 'GiftController@store')->name('store');
         });
+
+        // Post
+        Route::prefix('/post')->name('post.')->group(function () {
+            Route::get('/', 'PostController@index')->name('index');
+            Route::post('/', 'PostController@store')->name('store');
+            Route::post('/{post}/update', 'PostController@update')->name('update');
+            Route::get('/create', 'PostController@create')->name('create');
+            Route::get('/show', 'PostController@show')->name('show');
+            Route::get('/edit', 'PostController@edit')->name('edit');
+            Route::get('/delete', 'PostController@softDelete')->name('beforedelete');
+        });
     });
 
     Route::prefix('admin')->middleware('role')->namespace('Admin')->name('admin.')->group(function () {
