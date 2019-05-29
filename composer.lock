@@ -8,21 +8,21 @@
     "packages": [
         {
             "name": "barryvdh/laravel-dompdf",
-            "version": "v0.8.3",
+            "version": "v0.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-dompdf.git",
-                "reference": "46781d0304277845a19c09c169bc595fd182cce4"
+                "reference": "3fd817065e1c820b1ddace8b2bf65ca45088df4f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-dompdf/zipball/46781d0304277845a19c09c169bc595fd182cce4",
-                "reference": "46781d0304277845a19c09c169bc595fd182cce4",
+                "url": "https://api.github.com/repos/barryvdh/laravel-dompdf/zipball/3fd817065e1c820b1ddace8b2bf65ca45088df4f",
+                "reference": "3fd817065e1c820b1ddace8b2bf65ca45088df4f",
                 "shasum": ""
             },
             "require": {
                 "dompdf/dompdf": "^0.8",
-                "illuminate/support": "5.5.x|5.6.x|5.7.x",
+                "illuminate/support": "5.5.x|5.6.x|5.7.x|5.8.x",
                 "php": ">=7"
             },
             "type": "library",
@@ -60,7 +60,7 @@
                 "laravel",
                 "pdf"
             ],
-            "time": "2018-08-31T13:25:44+00:00"
+            "time": "2019-02-26T18:07:43+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -446,29 +446,33 @@
         },
         {
             "name": "dompdf/dompdf",
-            "version": "v0.8.2",
+            "version": "v0.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dompdf/dompdf.git",
-                "reference": "5113accd9ae5d466077cce5208dcf3fb871bf8f6"
+                "reference": "75f13c700009be21a1965dc2c5b68a8708c22ba2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dompdf/dompdf/zipball/5113accd9ae5d466077cce5208dcf3fb871bf8f6",
-                "reference": "5113accd9ae5d466077cce5208dcf3fb871bf8f6",
+                "url": "https://api.github.com/repos/dompdf/dompdf/zipball/75f13c700009be21a1965dc2c5b68a8708c22ba2",
+                "reference": "75f13c700009be21a1965dc2c5b68a8708c22ba2",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
-                "ext-gd": "*",
                 "ext-mbstring": "*",
                 "phenx/php-font-lib": "0.5.*",
                 "phenx/php-svg-lib": "0.3.*",
                 "php": ">=5.4.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "4.8.*",
+                "phpunit/phpunit": "^4.8|^5.5|^6.5",
                 "squizlabs/php_codesniffer": "2.*"
+            },
+            "suggest": {
+                "ext-gd": "Needed to process images",
+                "ext-gmagick": "Improves image processing performance",
+                "ext-imagick": "Improves image processing performance"
             },
             "type": "library",
             "extra": {
@@ -504,7 +508,7 @@
             ],
             "description": "DOMPDF is a CSS 2.1 compliant HTML to PDF converter",
             "homepage": "https://github.com/dompdf/dompdf",
-            "time": "2017-11-26T14:49:08+00:00"
+            "time": "2018-12-14T02:40:31+00:00"
         },
         {
             "name": "dragonmantank/cron-expression",
