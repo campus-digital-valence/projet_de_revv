@@ -33,7 +33,7 @@
                 <td>{{ $user->firstname }}</td>
                 <td class="text-right">
                     <a href="{{ route('admin.user.show', $user) }}" class="btn btn-sm btn-outline-primary"><span
-                                data-feather="edit"></span> Modifier</a>
+                                data-feather="search"></span> Afficher</a>
                     <a class="btn btn-sm btn-outline-danger"
                        href="{{ route('admin.user.delete', $user) }}"><span
                                 data-feather="trash"></span> Supprimer</a>
