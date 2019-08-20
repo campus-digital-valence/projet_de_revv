@@ -83,6 +83,7 @@ return [
     'Until'                                 => 'Jusqu\'au',
     'Status'                                => 'Statut',
     'No subscription'                       => 'Aucune adhésion',
+    'Remove account'                        => 'Supprimer compte',
     'Remove this account ?'                 => 'Supprimer ce compte ?',
     'Yes'                                   => 'Oui',
     'No'                                    => 'Non',

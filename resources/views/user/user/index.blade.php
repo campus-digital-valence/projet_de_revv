@@ -3,31 +3,31 @@
 @section('content')
 
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1>Informations personnelles</h1>
+        <h1>{{ __('app.Personal informations') }}</h1>
     </div>
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{{ route('home') }}">Accueil</a></li>
-            <li class="breadcrumb-item">Informations personnelles</li>
+            <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('app.Home') }}</a></li>
+            <li class="breadcrumb-item">{{ __('app.Personal informations') }}</li>
         </ol>
     </nav>
 
     <form action="{{ route('user.update') }}" method="post">
         @csrf
         <div class="form-group row">
-            <label for="gender" class="col-md-4 col-form-label text-md-right">Civilité</label>
+            <label for="gender" class="col-md-4 col-form-label text-md-right">{{ __('app.Gender') }}</label>
             <div class="col-md-8">
                 <select class="custom-select form-control" name="gender" id="gender">
-                    <option value="0" @if($user->gender == 0) selected @endif>{{ __('Gender') }}</option>
-                    <option value="1" @if($user->gender == 1) selected @endif>{{ __('Mr') }}</option>
-                    <option value="2" @if($user->gender == 2) selected @endif>{{ __('Ms') }}</option>
+                    <option value="0" @if($user->gender == 0) selected @endif>{{ __('app.Gender') }}</option>
+                    <option value="1" @if($user->gender == 1) selected @endif>{{ __('app.Mr') }}</option>
+                    <option value="2" @if($user->gender == 2) selected @endif>{{ __('app.Ms') }}</option>
                 </select>
             </div>
         </div>
 
         <div class="form-group row">
-            <label for="lastname" class="col-md-4 col-form-label text-md-right">Nom</label>
+            <label for="lastname" class="col-md-4 col-form-label text-md-right">{{ __('app.Lastname') }}</label>
             <div class="col-md-8">
                 <input type="text"
                        class="form-control {{$errors->has('lastname') ? 'is-invalid':''}}"
@@ -44,7 +44,7 @@
         </div>
 
         <div class="form-group row">
-            <label for="firstname" class="col-md-4 col-form-label text-md-right">Prénom</label>
+            <label for="firstname" class="col-md-4 col-form-label text-md-right">{{ __('app.Firstname') }}</label>
             <div class="col-md-8">
                 <input type="text" name="firstname"
                        class="form-control {{$errors->has('firstname') ? 'is-invalid':''}}" id="firstname"
@@ -59,7 +59,7 @@
         </div>
 
         <div class="form-group row">
-            <label for="email" class="col-md-4 col-form-label text-md-right">Adresse Email</label>
+            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('app.E-Mail Address') }}</label>
             <div class="col-md-8">
                 <input type="email"
                        name="email"
@@ -76,7 +76,7 @@
         </div>
 
         <div class="form-group row">
-            <label for="birthdate" class="col-md-4 col-form-label text-md-right">Date de naissance</label>
+            <label for="birthdate" class="col-md-4 col-form-label text-md-right">{{ __('app.Birthdate') }}</label>
             <div class="col-md-8">
                 <input type="date"
                        name="birthdate"
@@ -94,7 +94,7 @@
 
 
         <div class="form-group row">
-            <label for="address_line1" class="col-md-4 col-form-label text-md-right">Adresse</label>
+            <label for="address_line1" class="col-md-4 col-form-label text-md-right">{{ __('app.Address_line1') }}</label>
             <div class="col-md-8">
                 <input type="text" name="address_line1"
                        class="form-control {{$errors->has('address_line1') ? 'is-invalid':''}}"
@@ -111,7 +111,7 @@
 
 
         <div class="form-group row">
-            <label for="address_line2" class="col-md-4 col-form-label text-md-right">Adresse 2</label>
+            <label for="address_line2" class="col-md-4 col-form-label text-md-right">{{ __('app.Address_line2') }}</label>
             <div class="col-md-8">
                 <input type="text"
                        name="address_line2"
@@ -128,7 +128,7 @@
         </div>
 
         <div class="form-group row">
-            <label for="city" class="col-md-4 col-form-label text-md-right">Ville</label>
+            <label for="city" class="col-md-4 col-form-label text-md-right">{{ __('app.City') }}</label>
             <div class="col-md-8">
                 <input type="text"
                        name="city"
@@ -146,7 +146,7 @@
 
 
         <div class="form-group row">
-            <label for="zipcode" class="col-md-4 col-form-label text-md-right">Code Postal</label>
+            <label for="zipcode" class="col-md-4 col-form-label text-md-right">{{ __('app.Zipcode') }}</label>
             <div class="col-md-8">
                 <input type="text"
                        name="zipcode"
@@ -164,7 +164,7 @@
 
 
         <div class="form-group row">
-            <label for="phone_1" class="col-md-4 col-form-label text-md-right">Téléphone 1</label>
+            <label for="phone_1" class="col-md-4 col-form-label text-md-right">{{ __('app.Phone 1') }}</label>
             <div class="col-md-8">
                 <input type="text"
                        name="phone_1"
@@ -182,7 +182,7 @@
 
 
         <div class="form-group row">
-            <label for="phone_2" class="col-md-4 col-form-label text-md-right">Téléphone 2</label>
+            <label for="phone_2" class="col-md-4 col-form-label text-md-right">{{ __('app.Phone 2') }}</label>
             <div class="col-md-8">
                 <input type="text"
                        name="phone_2"
@@ -207,7 +207,7 @@
                            name="newspaper"
                            id="newspaper" {{$user->newspaper == 1 ? "checked" : ""}}
                            value="1">
-                    <label class="form-check-label" for="newspaper">Newspaper</label>
+                    <label class="form-check-label" for="newspaper">{{ __('app.Newspaper') }}</label>
                 </div>
             </div>
         </div>
@@ -220,31 +220,31 @@
                            name="newsletter"
                            id="newsletter" {{$user->newsletter == 1 ? "checked" : ""}}
                            value="1">
-                    <label class="form-check-label" for="newsletter">Newsletter</label>
+                    <label class="form-check-label" for="newsletter">{{ __('app.Newsletter') }}</label>
                 </div>
             </div>
         </div>
 
         <div class="form-group row">
             <div class="col-md-8 offset-md-4">
-                <h4>Informations du conjoint</h4>
+                <h4>{{__('app.Partner informations (if family)')}}</h4>
             </div>
         </div>
 
         <div class="form-group row">
-            <label for="gender_joint" class="col-md-4 col-form-label text-md-right">Civilité conjoint</label>
+            <label for="gender_joint" class="col-md-4 col-form-label text-md-right">{{ __('app.Partner Gender') }}</label>
             <div class="col-md-8">
                 <select class="custom-select form-control" name="gender_joint" id="gender_joint">
                     <option value="0"
-                            @if($user->gender_joint == 0) selected @endif>{{ __('Partner Gender') }}</option>
-                    <option value="1" @if($user->gender_joint == 1) selected @endif>{{ __('Mr') }}</option>
-                    <option value="2" @if($user->gender_joint == 2) selected @endif>{{ __('Ms') }}</option>
+                            @if($user->gender_joint == 0) selected @endif>{{ __('app.Partner Gender') }}</option>
+                    <option value="1" @if($user->gender_joint == 1) selected @endif>{{ __('app.Mr') }}</option>
+                    <option value="2" @if($user->gender_joint == 2) selected @endif>{{ __('app.Ms') }}</option>
                 </select>
             </div>
         </div>
 
         <div class="form-group row">
-            <label for="lastname_joint" class="col-md-4 col-form-label text-md-right">Nom</label>
+            <label for="lastname_joint" class="col-md-4 col-form-label text-md-right">{{ __('app.Partner Lastname') }}</label>
             <div class="col-md-8">
                 <input type="text"
                        name="lastname_joint"
@@ -261,7 +261,7 @@
         </div>
 
         <div class="form-group row">
-            <label for="firstname_joint" class="col-md-4 col-form-label text-md-right">Prénom</label>
+            <label for="firstname_joint" class="col-md-4 col-form-label text-md-right">{{ __('app.Partner Firstname') }}</label>
             <div class="col-md-8">
                 <input type="text"
                        name="firstname_joint"
@@ -278,7 +278,7 @@
         </div>
 
         <div class="form-group row">
-            <label for="birthdate_joint" class="col-md-4 col-form-label text-md-right">Date de naissance</label>
+            <label for="birthdate_joint" class="col-md-4 col-form-label text-md-right">{{ __('app.Partner Birthdate') }}</label>
             <div class="col-md-8">
                 <input type="date"
                        name="birthdate_joint"
@@ -295,7 +295,7 @@
         </div>
 
         <div class="form-group row">
-            <label for="email_joint" class="col-md-4 col-form-label text-md-right">Email conjoint</label>
+            <label for="email_joint" class="col-md-4 col-form-label text-md-right">{{ __('app.Partner E-Mail Address') }}</label>
             <div class="col-md-8">
                 <input type="email"
                        name="email_joint"
@@ -312,8 +312,8 @@
         </div>
         <div class="form-group row">
             <div class="col-md-8 offset-md-4">
-                <button type="submit" class="btn btn-primary">Modifier</button>
-                <a href="{{ route('user.delete') }}" class="btn btn-outline-danger">Supprimer compte</a>
+                <button type="submit" class="btn btn-primary">{{ __('app.Update') }}</button>
+                <a href="{{ route('user.delete') }}" class="btn btn-outline-danger">{{ __('app.Remove account') }}</a>
             </div>
         </div>
     </form>

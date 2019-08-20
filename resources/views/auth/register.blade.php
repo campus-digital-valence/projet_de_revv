@@ -260,7 +260,7 @@
                             </div>
                             <div class="form-group row">
                                 <label for="birthdate_joint"
-                                       class="col-md-4 col-form-label text-md-right">{{ __('app.Partner Birthday') }}</label>
+                                       class="col-md-4 col-form-label text-md-right">{{ __('app.Partner Birthdate') }}</label>
                                 <div class="col-md-8">
                                     <input id="birthdate_joint" type="date"
                                            class="form-control"
