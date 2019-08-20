@@ -2,13 +2,13 @@
 
 @section('content')
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1>{{ __('New Subscription') }}</h1>
+        <h1>{{ __('subscription.New Subscription') }}</h1>
     </div>
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{{ route('home') }}">Accueil</a></li>
-            <li class="breadcrumb-item">{{ __('New Subscription') }}</li>
+            <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('app.Home') }}</a></li>
+            <li class="breadcrumb-item">{{ __('subscription.New Subscription') }}</li>
         </ol>
     </nav>
 
@@ -17,7 +17,7 @@
             @csrf
 
             <div class="form-group row">
-                <label for="start-date" class="col-sm-4 col-form-label text-md-right">{{ __('NEW Start date') }}</label>
+                <label for="start-date" class="col-sm-4 col-form-label text-md-right">{{ __('subscription.NEW Start date') }}</label>
                 <div class="col-md-8">
                     <input type="text" readonly disabled class="form-control-plaintext text-success" id="start-date"
                            value="{{ $startDate->format('d/m/Y') }}">
@@ -25,7 +25,7 @@
             </div>
 
             <div class="form-group row">
-                <label for="end-date" class="col-sm-4 col-form-label text-md-right">{{ __('NEW End date') }}</label>
+                <label for="end-date" class="col-sm-4 col-form-label text-md-right">{{ __('subscription.NEW End date') }}</label>
                 <div class="col-md-8">
                     <input type="text" readonly disabled class="form-control-plaintext text-success" id="end-date"
                            value="{{ $endDate->format('d/m/Y') }}">
@@ -34,19 +34,19 @@
 
             <div class="form-group row">
                 <label for="selected-type"
-                       class="col-sm-4 col-form-label text-md-right">{{ __('Subscription type') }}</label>
+                       class="col-sm-4 col-form-label text-md-right">{{ __('app.Subscription type') }}</label>
                 <div class="col-md-8">
                     <select id="selected-type" name="type" class="custom-select">
                         @foreach($subscriptionTypes as $subscriptionType)
                             @if ($subscriptionType->id == $actualSubscriptionTypeId)
                                 <option selected value="{{ $subscriptionType->id }}"
                                         data-amount="{{ $subscriptionType->amount }}">
-                                    {{ $subscriptionType->name }}
+                                    {{ __('subscription.'.$subscriptionType->name) }}
                                 </option>
                             @else
                                 <option value="{{ $subscriptionType->id }}"
                                         data-amount="{{ $subscriptionType->amount }}">
-                                    {{ $subscriptionType->name }}
+                                    {{ __('subscription.'.$subscriptionType->name) }}
                                 </option>
 
                             @endif
@@ -56,7 +56,7 @@
             </div>
 
             <div class="form-group row">
-                <label for="subscription-amount" class="col-sm-4 col-form-label text-md-right">{{ __('Price') }}</label>
+                <label for="subscription-amount" class="col-sm-4 col-form-label text-md-right">{{ __('app.Price') }}</label>
                 <div class="col-md-8">
                     <input type="text" readonly disabled class="form-control-plaintext" id="subscription-amount">
                 </div>
@@ -66,7 +66,7 @@
                 <div class="col-md-8 offset-md-4">
                     @include('user.payment.payment')
                     <a href="{{route('user.subscription.pdf')}}" class="btn btn-success"
-                       target="_blank">{{__('Membership PDF')}}</a>
+                       target="_blank">{{__('subscription.Membership PDF')}}</a>
                 </div>
             </div>
         </form>
@@ -74,17 +74,17 @@
             @if ($subscriptionValide === "subscrValide")
                 <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
                     <div class="card-body">
-                        <h5 class="card-title">{{ __('Subscription Valid :-)') }}</h5>
-                        <p class="card-text">{{ __('Your subscription still cover the current period')}}
-                            <br/>{{__('You don\'t need to renewal it urgently') }}</p>
+                        <h5 class="card-title">{{ __('subscription.Subscription Valid :-)') }}</h5>
+                        <p class="card-text">{{ __('subscription.Your subscription still cover the current period')}}
+                            <br/>{{__('subscription.You don\'t need to renewal it urgently') }}</p>
                     </div>
                 </div>
             @elseif ($subscriptionValide === "subscrOutdated")
                 <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
                     <div class="card-body">
-                        <h5 class="card-title">{{ __('Subscription Outdated :-(') }}</h5>
-                        <p class="card-text">{{ __('Your subscription is outdated')}}
-                            <br/>{{__('Please renewal it use the bellow form.') }}</p>
+                        <h5 class="card-title">{{ __('subscription.Subscription Outdated :-(') }}</h5>
+                        <p class="card-text">{{ __('subscription.Your subscription is outdated')}}
+                            <br/>{{__('subscription.Please renewal it use the bellow form.') }}</p>
                     </div>
                 </div>
             @endif
@@ -92,14 +92,14 @@
     </div>
 
 
-    <h2>{{ __('Subscriptions History') }}</h2>
+    <h2>{{ __('subscription.Subscriptions History') }}</h2>
     <table class="table table-hover">
         <thead>
         <tr>
-            <th scope="col">{{ __('Start Date') }}</th>
-            <th scope="col">{{ __('End Date') }}</th>
-            <th scope="col">{{ __('Type') }}</th>
-            <th scope="col">{{ __('Amount') }}</th>
+            <th scope="col">{{ __('subscription.Start Date') }}</th>
+            <th scope="col">{{ __('subscription.End Date') }}</th>
+            <th scope="col">{{ __('subscription.Type') }}</th>
+            <th scope="col">{{ __('subscription.Amount') }}</th>
         </tr>
         </thead>
         <tbody>
@@ -113,7 +113,7 @@
             </tr>
         @empty
             <tr>
-                <td colspan="4">{{ __('No subscription yet') }}</td>
+                <td colspan="4">{{ __('subscription.No subscription yet') }}</td>
             </tr>
         @endforelse
 
