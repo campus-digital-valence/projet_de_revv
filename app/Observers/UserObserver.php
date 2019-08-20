@@ -42,9 +42,9 @@ class UserObserver
      * @param  \App\User $user
      * @return void
      */
-    public function deleted(User $user)
+    public function deleting(User $user)
     {
-        //
+        $user->role()->delete();
     }
 
     /**
