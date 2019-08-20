@@ -163,7 +163,7 @@
 <p class="paymentType"> Paiement par <b>chèque</b> ou <b>espèces</b> (rayez la mention inutile)</p>
 <p class="notaBene"><b>NB</b> : L'adhésion donne droit à un marquage gratuit contre le vol, pensez à en profiter !</p>
 
-<h2 class="activitiesTitle">Je suis prêt à participer à participer à certaines actions de REVV (facultatif) </h2>
+<h2 class="activitiesTitle">Je suis prêt à participer à certaines actions de REVV (facultatif) </h2>
 
 <div class="activities">
     <p>Permanence à la maison du vélo, un après-midi par semaine ou par mois (rayez la mention inutile)</p>
