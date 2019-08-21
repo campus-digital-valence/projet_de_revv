@@ -37,13 +37,13 @@ class GiftController extends Controller
         return view('admin.gift.create', [
             'user' => $user,
             'payments_methods' => $paymentsMethod,
-                ]);
+        ]);
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request, User $user)
@@ -54,11 +54,9 @@ class GiftController extends Controller
         ]);
         $inputs['user_id'] = $user->id;
         $gift = Gift::create($inputs);
-
         $inputs['payment_id'] = $gift->id;
         $inputs['payment_type'] = 'App\Gift';
         $inputs['payment_method_id'] = $request['payment_method_id'];
-
         Payment::create($inputs);
 
         return back()->with('message', 'Le don a bien été ajouté pour ce membre !');
@@ -67,7 +65,7 @@ class GiftController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show()
@@ -96,7 +94,7 @@ class GiftController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param \Illuminate\Http\Request $request
      * @param Gift $gift
      * @return \Illuminate\Http\Response
      */

@@ -19,11 +19,18 @@
         <div class="form-group row">
             <label for="amount" class="col-form-label col-md-2">Montant</label>
             <div class="input-group col-md-4">
-                <input id="amount" type="text" name="amount" class="form-control">
-                <div class="input-group-append">
+                <input id="amount" type="text" name="amount" class="form-control{{ $errors->has('amount') ? ' is-invalid' : '' }}"><div class="input-group-append">
                     <span class="input-group-text">€</span>
                 </div>
+                @if ($errors->has('amount') )
+                    <span class="invalid-feedback" role="alert">
+                   <strong> {{ $errors->first('amount')}}</strong>
+                </span>
+                @endif
             </div>
+
+
+
         </div>
 
         <input type="submit" value="Valider" class="btn btn-success">

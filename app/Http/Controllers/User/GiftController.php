@@ -8,6 +8,8 @@ use App\Payment;
 use App\PaymentMethod;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Validator;
+
 
 class GiftController extends Controller
 {
@@ -43,18 +45,15 @@ class GiftController extends Controller
      */
     public function store(Request $request)
     {
-        $inputs = $request->validate([
+        $inputs  = $request->validate([
             'amount' => 'required|numeric|min:0|max:999999',
         ]);
-
         $inputs['user_id'] = Auth::user()->id;
-
+        $inputs['amount'] = $request->input('amount');
         $gift = Gift::create($inputs);
-
         $inputs['payment_id'] = $gift->id;
         $inputs['payment_type'] = "App\gift";
         $inputs['payment_method_id'] = '2';
-
         Payment::create($inputs);
 
         return back()->with('message', 'Le don a bien été ajouté !');

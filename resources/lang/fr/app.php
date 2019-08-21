@@ -75,6 +75,7 @@ return [
     'History of your donation(s)'           => 'Votre historique de don(s)',
     'Donor'                                 => 'Donateur',
     'Amount'                                => 'Montant',
+    'amount'                                => 'montant',
     'Date'                                  => 'Date',
     'Payment method'                        => 'Mode de paiement',
     'No gift'                               => 'Aucun don',

@@ -185,5 +185,6 @@ return [
         'firstname_joint'       => 'prénom du conjoint',
         'email_joint'           => 'adresse email du conjoint',
         'birthdate_joint'       => 'date de naissance du conjoint',
+        'amount'                => 'montant',
     ],
 ];
