@@ -2,9 +2,9 @@
 
 namespace App\Observers;
 
+use App\Mail\Welcome;
 use App\Role;
 use App\User;
-use App\Mail\Welcome;
 use Illuminate\Support\Facades\Mail;
 
 class UserObserver

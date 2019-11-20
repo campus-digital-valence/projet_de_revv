@@ -3,9 +3,9 @@
 namespace App\Exports;
 
 use App\Gift;
-use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\ShouldAutoSize;
+use Maatwebsite\Excel\Concerns\WithHeadings;
 
 class GiftsExport implements FromCollection, WithHeadings, ShouldAutoSize
 {

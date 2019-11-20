@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Session;
 use App\Http\Controllers\Controller;
+use App\Session;
 
 class SessionController extends Controller
 {

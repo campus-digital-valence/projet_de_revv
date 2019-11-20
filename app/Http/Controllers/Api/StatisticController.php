@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Api;
 
-use DB;
-use Carbon\Carbon;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
+use DB;
+use Illuminate\Http\Request;
 
 class StatisticController extends Controller
 {

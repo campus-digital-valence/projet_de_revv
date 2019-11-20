@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers\User;
 
-use PDF;
-use Auth;
-use App\User;
+use App\Http\Controllers\Controller;
 use App\Payment;
-use Carbon\Carbon;
 use App\Subscription;
 use App\SubscriptionType;
+use App\User;
+use Auth;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use PDF;
 
 class SubscriptionController extends Controller
 {

@@ -2,9 +2,9 @@
 
 namespace App\Observers;
 
-use App\Subscription;
 use App\Mail\MembershipNew;
 use App\Mail\MembershipRenewal;
+use App\Subscription;
 use Illuminate\Support\Facades\Mail;
 
 class SubscriptionObserver

@@ -2,15 +2,15 @@
 
 namespace App\Jobs;
 
-use App\User;
-use App\Newsletter;
 use App\Mail\SendNewsletter;
+use App\Newsletter;
+use App\User;
 use Illuminate\Bus\Queueable;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Mail;
 
 class SendNewsletterJob implements ShouldQueue
 {

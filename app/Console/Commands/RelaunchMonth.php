@@ -2,11 +2,11 @@
 
 namespace App\Console\Commands;
 
-use Carbon\Carbon;
+use App\Mail\MembershipRelaunchMonth;
 use App\Subscription;
+use Carbon\Carbon;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\MembershipRelaunchMonth;
 
 class RelaunchMonth extends Command
 {

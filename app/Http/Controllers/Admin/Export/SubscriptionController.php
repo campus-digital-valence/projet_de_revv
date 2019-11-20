@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Admin\Export;
 
-use Carbon\Carbon;
-use Illuminate\Http\Request;
 use App\Exports\SubscriptionsExport;
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
+use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 
 class SubscriptionController extends Controller

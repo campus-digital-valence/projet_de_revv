@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Auth;
 use App\Gift;
-use App\User;
+use App\Http\Controllers\Controller;
 use App\Payment;
 use App\PaymentMethod;
+use App\User;
+use Auth;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
 class GiftController extends Controller
 {

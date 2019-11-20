@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Payment;
-use Carbon\Carbon;
-use App\Subscription;
-use App\PaymentMethod;
-use App\SubscriptionType;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Payment;
+use App\PaymentMethod;
+use App\Subscription;
+use App\SubscriptionType;
+use Carbon\Carbon;
+use Illuminate\Http\Request;
 
 class SubscriptionController extends Controller
 {

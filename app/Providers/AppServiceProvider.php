@@ -2,11 +2,11 @@
 
 namespace App\Providers;
 
-use App\User;
-use App\Subscription;
-use App\Observers\UserObserver;
-use Illuminate\Support\Facades\Schema;
 use App\Observers\SubscriptionObserver;
+use App\Observers\UserObserver;
+use App\Subscription;
+use App\User;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider

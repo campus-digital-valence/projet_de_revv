@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
-use Carbon\Carbon;
 use App\Newsletter;
 use App\Subscription;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller

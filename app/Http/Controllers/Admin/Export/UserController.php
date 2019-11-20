@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Admin\Export;
 
-use Carbon\Carbon;
 use App\Exports\UsersExport;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
+use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
